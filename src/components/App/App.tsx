@@ -1,4 +1,12 @@
+import * as React from "react";
 import styled from "styled-components";
+
+const items = [
+  { title: "", copy: "", icon: "" },
+  { title: "", copy: "", icon: "" },
+  { title: "", copy: "", icon: "" },
+  { title: "", copy: "", icon: "" }
+];
 
 const Wrapper = styled.main``;
 
