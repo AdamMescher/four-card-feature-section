@@ -6,6 +6,16 @@ import App from "./App";
 expect.extend(toHaveNoViolations);
 
 describe("App Component", () => {
+  it("Should render without errors", async () => {
+    render(<App />);
+    expect(
+      screen.getByText(/Reliable, efficient delivery/i)
+    ).toBeInTheDocument();
+    expect(screen.getByText(/powered by technology/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/our artificial intelligence/i)
+    ).toBeInTheDocument();
+  });
   it("Should render without axe a11y errors", async () => {
     render(<App />);
     expect(await axe(screen.getByTestId("app"))).toHaveNoViolations();

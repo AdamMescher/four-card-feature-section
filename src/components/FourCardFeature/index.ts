@@ -1,1 +1,1 @@
-import { default } from './FourCardFeature';
+export { default } from "./FourCardFeature";
